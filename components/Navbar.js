@@ -63,7 +63,7 @@ const NAV_ITEMS = [
 	},
 ];
 
-export default function WithSubnavigation() {
+export default function Navbar() {
 	const { isOpen, onToggle } = useDisclosure();
 
 	const width = useBreakpointValue(
@@ -107,7 +107,9 @@ export default function WithSubnavigation() {
 						textAlign={width}
 						fontFamily={"mono"}
 						color={useColorModeValue("gray.800", "white")}>
-						Vishal
+						<Button as={"a"} href="/" variant={"link"}>
+							Vishal
+						</Button>
 					</Text>
 
 					<Flex display={{ base: "none", md: "flex" }} ml={10}>
@@ -125,7 +127,7 @@ export default function WithSubnavigation() {
 						fontSize={"sm"}
 						fontWeight={400}
 						variant={"link"}
-						href={"#"}>
+						href="/signin">
 						Sign In
 					</Button>
 
@@ -136,7 +138,7 @@ export default function WithSubnavigation() {
 						fontWeight={600}
 						color={"white"}
 						bg={"pink.400"}
-						href={"#"}
+						href="/signup"
 						_hover={{
 							bg: "pink.300",
 						}}>
